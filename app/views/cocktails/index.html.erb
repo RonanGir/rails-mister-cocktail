@@ -1,13 +1,18 @@
 <div class="container">
 
-  <h1 class="text-center">Let's discover my favorite cocktails</h1>
+  <h1 class="text-center">Let's taste new cocktails</h1>
   <p class="text-center"><%= link_to 'Add your cocktail', new_cocktail_path, class: 'btn btn-danger' %></p>
 
- <div class="row text-center">
-  <% @cocktails.each do |cocktail| %>
+  <div class="row text-center">
+    <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-category">Popular</div>
+        <div class="card-description">
+          <h2>
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          </h2>
+        </div>
       </div>
     </div>
     <% end %>

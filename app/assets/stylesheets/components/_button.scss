@@ -1,0 +1,12 @@
+.banner-button {
+  color: white;
+  background-color: $red;
+  padding: 10px;
+}
+
+
+.banner-button:hover {
+  color: white;
+  background-color: $yellow;
+  text-decoration: none;
+}
