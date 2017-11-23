@@ -1,8 +1,9 @@
 <div class="container">
 
-  <h1>Let's discover my favorite cocktails</h1>
+  <h1 class="text-center">Let's discover my favorite cocktails</h1>
+  <p class="text-center"><%= link_to 'Add your cocktail', new_cocktail_path, class: 'btn btn-danger' %></p>
 
- <div class="row">
+ <div class="row text-center">
   <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
       <div class="card">
