@@ -1,9 +1,8 @@
 <div class="navbar-wagon">
   <!-- Logo -->
    <%= link_to root_path, class: 'navbar-wagon-brand' do %>
-      <%= image_tag("logo.png") %>
+      <%= image_tag("logo.png", alt: "profile picture") %>
     <% end %>
-
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -12,7 +11,8 @@
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <img src="../../assets/images/profile.png" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <%= image_tag("profile.png", class: 'avatar dropdown-toggle', id: 'navbar-wagon-menu', data: { toggle: 'dropdown' }) %>
+        <!-- img src="../../assets/images/profile.png" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"> -->
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
@@ -27,9 +27,7 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li><%= link_to 'cocktails', cocktails_path, class: 'navbar-wagon-item navbar-wagon-link' %></li>
       </ul>
     </div>
   </div>
